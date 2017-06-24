@@ -1,5 +1,7 @@
 package se.lerinn.cerberus.config;
 
+import static se.lerinn.cerberus.util.PropertyReader.readProperty;
+
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
@@ -26,16 +28,16 @@ public class ApplicationConfig {
 	
 	@Bean
 	public DataSource dataSource() {
-		try {
-			Class.forName("com.mysql.jdbc.Driver");
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
+//		try {
+//			Class.forName("com.mysql.jdbc.Driver");
+//		} catch (ClassNotFoundException e) {
+//			e.printStackTrace();
+//		}
 		HikariConfig config = new HikariConfig();
 		config.setDriverClassName("com.mysql.jdbc.Driver");
 		config.setJdbcUrl("jdbc:mysql://localhost:3306/recipedb");
-		config.setUsername("root");
-		config.setPassword("root");
+		config.setUsername(readProperty("database.username"));
+		config.setPassword(readProperty("database.password"));
 		return new HikariDataSource(config);
 	}
 	
