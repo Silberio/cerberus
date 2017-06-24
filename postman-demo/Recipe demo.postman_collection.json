@@ -1,0 +1,111 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Recipe demo",
+		"_postman_id": "e9afbf37-c120-9ebd-579b-17ee7999b24d",
+		"description": "A simple demonstration for the recipes endpoint, how the endpoints look and how to use them",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PUTting (updating) the first recipe",
+			"request": {
+				"url": "localhost:8080/recipes/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"pichulas con pan\",\n\t\"ingredients\": \"pichula, pan, limón, mayonesa, pebre\",\n\t\"instruction\": \"put the puchulas into the bread, put the mayonesa on the pichulas and pebre on top, then eat not puke, sorry\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "POSTing a new recipe",
+			"request": {
+				"url": "localhost:8080/recipes",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"pichulas con pan\",\n\t\"ingredients\": \"pichula, pan, limón, mayonesa, pebre\",\n\t\"instruction\": \"put the puchulas into the bread, put the mayonesa on the pichulas and pebre on top, then eat not puke\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GETting the first recipe",
+			"request": {
+				"url": "localhost:8080/recipes/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"pichulas con pan\",\n\t\"ingredients\": \"pichula, pan, limón, mayonesa, pebre\",\n\t\"instruction\": \"put the puchulas into the bread, put the mayonesa on the pichulas and pebre on top, then eat not puke\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GETting all recipes in a json list",
+			"request": {
+				"url": "localhost:8080/recipes",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"pichulas con pan\",\n\t\"ingredients\": \"pichula, pan, limón, mayonesa, pebre\",\n\t\"instruction\": \"put the puchulas into the bread, put the mayonesa on the pichulas and pebre on top, then eat not puke\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE-ing the first recipe",
+			"request": {
+				"url": "localhost:8080/recipes/1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"pichulas con pan\",\n\t\"ingredients\": \"pichula, pan, limón, mayonesa, pebre\",\n\t\"instruction\": \"put the puchulas into the bread, put the mayonesa on the pichulas and pebre on top, then eat not puke\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
