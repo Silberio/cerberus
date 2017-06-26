@@ -35,7 +35,7 @@ public class ApplicationConfig {
 //		}
 		HikariConfig config = new HikariConfig();
 		config.setDriverClassName("com.mysql.jdbc.Driver");
-		config.setJdbcUrl("jdbc:mysql://localhost:3306/recipedb");
+		config.setJdbcUrl("jdbc:mysql://localhost:3306/" + readProperty("database.name"));
 		config.setUsername(readProperty("database.username"));
 		config.setPassword(readProperty("database.password"));
 		return new HikariDataSource(config);
