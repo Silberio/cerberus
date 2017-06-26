@@ -28,11 +28,6 @@ public class ApplicationConfig {
 	
 	@Bean
 	public DataSource dataSource() {
-//		try {
-//			Class.forName("com.mysql.jdbc.Driver");
-//		} catch (ClassNotFoundException e) {
-//			e.printStackTrace();
-//		}
 		HikariConfig config = new HikariConfig();
 		config.setDriverClassName("com.mysql.jdbc.Driver");
 		config.setJdbcUrl("jdbc:mysql://localhost:3306/" + readProperty("database.name"));
